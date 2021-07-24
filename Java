@@ -1,0 +1,69 @@
+package com.mycompany.basketball;
+
+import android.app.*;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
+
+public class MainActivity extends Activity
+{int score=0,s=0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+	public void add3(View v)
+	{score += 3;
+		display(score);
+	}
+	public void add2(View v)
+	{score += 2;
+		display(score);
+	}
+	public void add1(View v)
+	{score += 1;
+		display(score);
+	}
+	public void reset(View v)
+	{score = 0; s = 0;
+		display(score);
+		displayb(s);
+	}
+
+	public void an(View v)
+	{score -= 1;
+		display(score);
+	}
+
+	public void add3b(View v)
+	{s += 3;
+		displayb(s);
+	}
+	public void add2b(View v)
+	{s += 2;
+		displayb(s);
+	}
+	public void add1b(View v)
+	{s+= 1;
+		displayb(s);
+	}
+
+	public void bn(View v)
+	{s -= 1;
+		displayb(s);
+	}
+
+
+	public void display(int score)
+	{
+		TextView scoreView = (TextView) findViewById(R.id.a);
+		scoreView.setText(String.valueOf(score));
+	}
+	public void displayb(int scoreb)
+	{
+		TextView scoreView = (TextView) findViewById(R.id.b);
+		scoreView.setText(String.valueOf(scoreb));
+	}
+
+}
